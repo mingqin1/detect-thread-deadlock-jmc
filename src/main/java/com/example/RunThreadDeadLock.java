@@ -35,7 +35,6 @@ public class RunThreadDeadLock {
 
        public void rightLeft() {
             synchronized (right) {
-                
                 synchronized (left) {
                     doSomething(number); 
                 }
