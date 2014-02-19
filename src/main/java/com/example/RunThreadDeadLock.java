@@ -6,7 +6,7 @@ package com.example;
 
 /**
  *
- * @author Ming Qin      ( mingqin@live.com)
+ * @author Ming Qin  ( mingqin@live.com)
  */
 public class RunThreadDeadLock {
     
