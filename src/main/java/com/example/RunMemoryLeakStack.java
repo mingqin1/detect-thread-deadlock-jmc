@@ -35,6 +35,7 @@ public class RunMemoryLeakStack {
             }
             Object result = elements[--size];
             //elements[size] = null;
+            //test
             return result;
         }
 
