@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-Xms64m -Xms128m -Xmx128m -XX:PermSize=128m -XX:MaxPermSize=128m -XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:FlightRecorderOptions=defaultrecording=true,dumponexit=true,dumponexitpath=C:\temp1\cims.jfr -XX:StartFlightRecording=duration=300s,filename=C:\temp1\cims-300s.jfr,settings=profile -XX:+UseParallelOldGC -verbose:gc -XX:+PrintGCDateStamps -XX:+PrintGCDetails -Xloggc:cims-gc.log   -XX:ErrorFile=C:\temp1\java_error%p.log  -XX:+HeapDumpOnOutOfMemoryError  -XX:HeapDumpPath=C:\temp1 -classpath %classpath com.example.RunMemoryLeakStack</exec.args>
+                <exec.executable>java</exec.executable>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -Xms64m -Xms128m -Xmx128m -XX:PermSize=128m -XX:MaxPermSize=128m -XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:FlightRecorderOptions=defaultrecording=true,dumponexit=true,dumponexitpath=C:\temp1\cims.jfr -XX:StartFlightRecording=duration=300s,filename=C:\temp1\cims-300s.jfr,settings=profile -XX:+UseParallelOldGC -verbose:gc -XX:+PrintGCDateStamps -XX:+PrintGCDetails -Xloggc:cims-gc.log   -XX:ErrorFile=C:\temp1\java_error%p.log  -XX:+HeapDumpOnOutOfMemoryError  -XX:HeapDumpPath=C:\temp1 -classpath %classpath com.example.RunMemoryLeakStack</exec.args>
+                <exec.executable>java</exec.executable>
+                <jpda.listen>true</jpda.listen>
+            </properties>
+        </action>
+        <action>
+            <actionName>profile</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-Xms64m -Xms128m -Xmx128m -XX:PermSize=128m -XX:MaxPermSize=128m -XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:FlightRecorderOptions=defaultrecording=true,dumponexit=true,dumponexitpath=C:\temp1\cims.jfr -XX:StartFlightRecording=duration=300s,filename=C:\temp1\cims-300s.jfr,settings=profile -XX:+UseParallelOldGC -verbose:gc -XX:+PrintGCDateStamps -XX:+PrintGCDetails -Xloggc:cims-gc.log   -XX:ErrorFile=C:\temp1\java_error%p.log  -XX:+HeapDumpOnOutOfMemoryError  -XX:HeapDumpPath=C:\temp1 -classpath %classpath com.example.RunMemoryLeakStack</exec.args>
+                <exec.executable>java</exec.executable>
+            </properties>
+        </action>
+    </actions>

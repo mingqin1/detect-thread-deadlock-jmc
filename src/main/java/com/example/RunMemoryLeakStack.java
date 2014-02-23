@@ -33,11 +33,17 @@ public class RunMemoryLeakStack {
             if (size == 0) {
                 throw new EmptyStackException();
             }
-            return elements[--size];
+            Object result = elements[--size];
+            //elements[size] = null;
+            return result;
         }
 
         public boolean isEmmpty() {
             return size == 0;
+        }
+
+        public int getSize() {
+            return size;
         }
 
         /**
@@ -54,19 +60,22 @@ public class RunMemoryLeakStack {
 
     public static void main(String[] args) {
         Stack s = new Stack();
-        try {
-            for (int i = 0; i < 10000; i++) {
-                s.push(i);
 
-            }
-            while (!s.isEmmpty()) {
-                s.pop();
-            }
-
-            System.in.read();
-        } catch (Throwable throwable) {
-            System.out.println(throwable.getMessage());
+        for (int i = 0; i < 900000; i++) {
+            s.push(new Integer(i));
+            System.out.println(" ush  ....." + i);
         }
+        while (!s.isEmmpty()) {
+            s.pop();
+            System.out.println(" PoP   ....." + s.getSize());
+        }
+        /*
+        while (true) {
+            System.out.println(s.getSize());
+        }*/
+        
+        System.exit(0);
+
     }
 
 }
