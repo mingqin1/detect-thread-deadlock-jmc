@@ -17,6 +17,8 @@ public class RunThreadDeadLock {
                                 // thread starvation issue.
         
         //adding comments
+        
+        // another comments
         public void doSomething( int number){
             for ( int i=0; i< number; i++){
                             char[] tmp = new char [1024*1024];
