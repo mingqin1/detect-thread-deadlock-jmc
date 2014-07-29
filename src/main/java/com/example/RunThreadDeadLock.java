@@ -9,7 +9,7 @@ package com.example;
  * @author Ming Qin  ( mingqin@live.com)
  */
 public class RunThreadDeadLock {
-    // another change
+    
     private static class LeftRightDeadLock implements Runnable{
         private static final Object left = new Object();
         private static final Object right = new Object();
