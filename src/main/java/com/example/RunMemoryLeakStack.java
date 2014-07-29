@@ -13,7 +13,8 @@ import java.util.EmptyStackException;
  * @author qin
  */
 public class RunMemoryLeakStack {
-      
+    
+    //git learning 
     private static class Stack {
 
         private Object[] elements;
