@@ -18,6 +18,8 @@ public class RunMemoryLeakStack {
      int b=81;
      
      boolean dfd2=true;
+     
+     String ad="test";
     private static class Stack {
 
         private Object[] elements;
