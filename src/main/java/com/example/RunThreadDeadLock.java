@@ -16,7 +16,7 @@ public class RunThreadDeadLock {
         private int number =1;  // change value of numbe to 4000,  to find 
                                 // thread starvation issue.
         
-        //adding comments
+        
         public void doSomething( int number){
             for ( int i=0; i< number; i++){
                             char[] tmp = new char [1024*1024];
