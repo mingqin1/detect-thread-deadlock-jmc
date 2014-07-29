@@ -14,10 +14,7 @@ import java.util.EmptyStackException;
  */
 public class RunMemoryLeakStack {
 
-     int a=2;
-     int b=81;
      
-     boolean dfd2=true;
      
      String ad="test";
     private static class Stack {
