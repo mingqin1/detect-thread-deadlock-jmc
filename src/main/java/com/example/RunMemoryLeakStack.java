@@ -14,7 +14,7 @@ import java.util.EmptyStackException;
  */
 public class RunMemoryLeakStack {
 
-    boolean a = true;
+    int a=2;
     private static class Stack {
 
         private Object[] elements;
