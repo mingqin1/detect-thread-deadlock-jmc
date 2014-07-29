@@ -16,7 +16,7 @@ public class RunMemoryLeakStack {
 
      
      int a=1;
-     String ad="test";
+     String ad="test1";
      
      String wone="wonder";
     private static class Stack {
