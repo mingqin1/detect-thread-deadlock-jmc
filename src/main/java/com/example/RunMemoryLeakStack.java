@@ -17,6 +17,7 @@ public class RunMemoryLeakStack {
    
     private static class Stack {
 
+        
         private Object[] elements;
         private int size = 0;
         private static final int DEFAULT_INITIAL_CAPACITY = 16;
@@ -37,6 +38,7 @@ public class RunMemoryLeakStack {
             Object result = elements[--size];
             //elements[size] = null;
             //test
+            System.out.println (  "  my world");
             return result;
         }
 
